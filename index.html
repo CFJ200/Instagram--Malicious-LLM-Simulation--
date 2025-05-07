@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Import Roboto font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-box {
+      background-color: #121212;
+      padding: 40px;
+      border: 1px solid #262626;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      background: #262626;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #0095f6;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .or-line {
+      margin: 20px 0;
+      border-top: 1px solid #262626;
+      position: relative;
+    }
+    .or-line span {
+      position: absolute;
+      top: -10px;
+      background: #121212;
+      padding: 0 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #a8a8a8;
+      font-size: 12px;
+    }
+    .facebook-login {
+      color: #0095f6;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .facebook-login i {
+      font-size: 16px;
+    }
+    .forgot {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="instagram-logo-removebg-preview.png" alt="Instagram" style="width: 180px; margin-bottom: 30px;">
+    <input id="username" type="text" placeholder="Phone number, username, or email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="handleLogin()">Log in</button>
+
+    <div class="or-line"><span>OR</span></div>
+
+    <div class="facebook-login">
+      <i class="fab fa-facebook-square"></i>
+      <a href="#" style="color:#0095f6; text-decoration: none;">Log in with Facebook</a>
+    </div>
+
+    <div class="forgot">
+      <a href="#" style="color: #a8a8a8; text-decoration: none;">Forgot password?</a>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      console.log("🔐 Username:", username);
+      console.log("🔑 Password:", password);
+
+      alert("Login info captured. Thanks!");
+    }
+  </script>
+</body>
+</html>
